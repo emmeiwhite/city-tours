@@ -1,0 +1,19 @@
+// Basic Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Scss Variables
+$mainBlack: #222;
+$mainGreen: #82b340;
+$mainWhite: #fff;
+$mainGrey: #ececec;
+$mainTransition:all 0.5s ease-in;
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: $mainWhite;
+  color: $mainBlack;
+}

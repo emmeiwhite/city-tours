@@ -1,0 +1,86 @@
+@import './../../index.scss';
+
+
+
+.tour-details-section{
+  margin-bottom:0;
+}
+
+.tour-main-image{
+    position: relative;
+    min-height: 100%;
+    img{
+      display: block;
+      width:100%;
+      min-height:100%;
+      cursor: pointer;
+    }
+
+    span{
+      position: absolute;
+      right:1rem;
+      top:1rem;
+      z-index: 100;
+      transition:$mainTransition;
+      opacity: 0;
+      i{
+        color:$mainGreen;
+        font-size: 1.5rem;
+      }
+    }
+
+    span &:hover{
+        opacity: 1;
+    }
+}
+
+// Handling the hover
+.tour-main-image:hover{
+  span{
+    opacity: 1;
+    i{
+      cursor: pointer;
+    }
+  }
+
+}
+
+.tour-info{
+    background: $mainGrey;
+    padding: 1rem;
+    h3{
+      text-transform: uppercase;
+      color:$mainGreen;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    h4{
+      margin:0.5rem 0;
+      font-size: 1.4rem;
+      text-transform: capitalize;
+      font-weight: 400;
+    }
+    h5{
+      text-transform: capitalize;
+      font-size: 1rem;
+      font-weight: 400;
+      i{
+        font-size: 1.4rem;
+        color:$mainGreen;
+        cursor:pointer;
+      }
+    }
+
+    .info{
+      transition:height 0.5s linear;
+      margin-top:1rem
+    }
+}
+
+@media (min-width:768px){
+  .tour-details-section{
+    display: grid;
+    grid-template-columns:3fr 5fr;
+    margin-bottom: 2rem;
+  }
+}
